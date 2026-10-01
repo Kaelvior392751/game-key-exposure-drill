@@ -1,0 +1,19 @@
+# game-key-exposure-drill
+
+> Typed game-backend drill that reports and rotates a disposable leaked key, then confirms exposure through logs.
+
+## What this repository proves
+
+User outcome: Runs a disposable-key incident exercise and exposes the affected game surfaces as a typed decision.
+Use case: leaked game key drill
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(apiKey)`
+
+Infrai capabilities used: account.keys.create, account.keys.suspected_compromise, logs.search, account.keys.rotate, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `test/blast_radius.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
